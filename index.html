@@ -19,7 +19,7 @@
       /* Kategorie-Farben */
       --badge-podcast: #8b5cf6; /* Lila */
       --badge-hoerspiel: #10b981; /* Türkis/Grün */
-      --badge-video: #f97316; /* Maus-Orange */
+      --badge-video: #0284c7; /* Wissenschafts-Blau */
     }
 
     * {
@@ -208,14 +208,14 @@
 
   <header>
     <h1>🎧 Hörspiel- & Videokiste 📺</h1>
-    <p>Wähle ein Hörspiel, einen Podcast oder ein Video aus!</p>
+    <p>Wähle ein Hörspiel, einen Podcast oder ein Wissensvideo aus!</p>
     
     <!-- Filter-Navigation -->
     <nav class="filter-bar">
       <button class="filter-btn active" onclick="filterCategory('all', this)">⭐ Alles</button>
       <button class="filter-btn" onclick="filterCategory('podcast', this)">🎙️ Podcasts</button>
       <button class="filter-btn" onclick="filterCategory('hoerspiel', this)">🎵 Hörspiele</button>
-      <button class="filter-btn" onclick="filterCategory('video', this)">🐭 Videos & Maus</button>
+      <button class="filter-btn" onclick="filterCategory('video', this)">🌍 Videos & Wissen</button>
     </nav>
   </header>
 
@@ -235,16 +235,16 @@
       </iframe>
     </article>
 
-    <!-- 2. Die Sendung mit der Maus (Video) -->
+    <!-- 2. Video: Kurzgesagt – Dinge Erklärt (Offizielle Upload-Playlist) -->
     <article class="media-card" data-category="video">
       <div class="card-header">
-        <span class="badge badge-video">Video</span>
-        <h2 class="card-title">Die Maus - Sachgeschichten</h2>
+        <span class="badge badge-video">Wissen</span>
+        <h2 class="card-title">Kurzgesagt – Dinge Erklärt</h2>
       </div>
       <div class="video-container">
         <iframe 
-          src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A?rel=0&modestbranding=1" 
-          title="Die Sendung mit der Maus" 
+          src="https://www.youtube-nocookie.com/embed/videoseries?list=UUwRH985XgMYXQ6NxXDo8npw" 
+          title="Kurzgesagt – Dinge Erklärt" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen 
           loading="lazy">
@@ -252,7 +252,7 @@
       </div>
     </article>
 
-    <!-- 3. NEU: Woozle Goozle: Luft (Spotify Album) -->
+    <!-- 3. Woozle Goozle: Luft (Spotify Album) -->
     <article class="media-card" data-category="hoerspiel">
       <div class="card-header">
         <span class="badge badge-hoerspiel">Hörspiel</span>
@@ -266,7 +266,49 @@
       </iframe>
     </article>
 
-    <!-- 4. NEU: Deine Playlist (Spotify Playlist) -->
+    <!-- 4. Fünf Freunde (Spotify Playlist) -->
+    <article class="media-card" data-category="hoerspiel">
+      <div class="card-header">
+        <span class="badge badge-hoerspiel">Hörspiel</span>
+        <h2 class="card-title">Fünf Freunde</h2>
+      </div>
+      <iframe 
+        class="spotify-frame"
+        src="https://open.spotify.com/embed/playlist/2LWhnkq5KzIprx8XqyPy4d?utm_source=generator&si=4fcbad54ea954d12" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </article>
+
+    <!-- 5. Die drei ??? Kids (Spotify Playlist) -->
+    <article class="media-card" data-category="hoerspiel">
+      <div class="card-header">
+        <span class="badge badge-hoerspiel">Hörspiel</span>
+        <h2 class="card-title">Die drei ??? Kids</h2>
+      </div>
+      <iframe 
+        class="spotify-frame"
+        src="https://open.spotify.com/embed/playlist/6GW1MH9yw8zA2AHDPW73cO?utm_source=generator&si=c89abe5ee87a4f0b" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </article>
+
+    <!-- 6. Pumuckl - Neue Abenteuer (Spotify Playlist) -->
+    <article class="media-card" data-category="hoerspiel">
+      <div class="card-header">
+        <span class="badge badge-hoerspiel">Hörspiel</span>
+        <h2 class="card-title">Pumuckl – Neue Abenteuer</h2>
+      </div>
+      <iframe 
+        class="spotify-frame"
+        src="https://open.spotify.com/embed/playlist/5ZoPDVO3SPjX6L41z30eu3?utm_source=generator&si=037665c5dc454abd" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </article>
+
+    <!-- 7. Deine Kinder-Playlist (Spotify Playlist) -->
     <article class="media-card" data-category="hoerspiel">
       <div class="card-header">
         <span class="badge badge-hoerspiel">Playlist</span>
@@ -275,34 +317,6 @@
       <iframe 
         class="spotify-frame"
         src="https://open.spotify.com/embed/playlist/75Qa7pDcN3AMf35RiCf0fi?utm_source=generator&si=02c631d50ddb4f99" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy">
-      </iframe>
-    </article>
-
-    <!-- 5. Hörspiel-Album: Pumuckl (Spotify) -->
-    <article class="media-card" data-category="hoerspiel">
-      <div class="card-header">
-        <span class="badge badge-hoerspiel">Hörspiel</span>
-        <h2 class="card-title">Pumuckl - Neue Abenteuer</h2>
-      </div>
-      <iframe 
-        class="spotify-frame"
-        src="https://open.spotify.com/embed/album/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy">
-      </iframe>
-    </article>
-
-    <!-- 6. Hörspiel: Die drei ??? Kids (Spotify) -->
-    <article class="media-card" data-category="hoerspiel">
-      <div class="card-header">
-        <span class="badge badge-hoerspiel">Hörspiel</span>
-        <h2 class="card-title">Die drei ??? Kids</h2>
-      </div>
-      <iframe 
-        class="spotify-frame"
-        src="https://open.spotify.com/embed/album/4eLPsYPBmKyeb0W7V2OFoJ?utm_source=generator&theme=0" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy">
       </iframe>
